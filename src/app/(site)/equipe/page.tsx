@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { equipe, type GrupoEquipe, type MembroEquipe } from "@/data/equipe";
+import { MembroAvatar } from "@/components/MembroAvatar";
+import { equipe, type GrupoEquipe } from "@/data/equipe";
 import siteConfig from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -274,33 +275,5 @@ export default function TeamPage() {
         </div>
       </section>
     </>
-  );
-}
-
-function MembroAvatar({ nome, foto }: Pick<MembroEquipe, "nome" | "foto">) {
-  if (foto) {
-    return (
-      <Image
-        src={foto}
-        alt={`Foto de ${nome}`}
-        width={96}
-        height={96}
-        className="h-24 w-24 rounded-full border border-[var(--wp-edge)] object-cover"
-      />
-    );
-  }
-
-  const partes = nome.trim().split(/\s+/).filter(Boolean);
-  const primeira = partes[0]?.[0] ?? "";
-  const ultima = partes.length > 1 ? partes[partes.length - 1][0] : "";
-  const iniciais = (primeira + ultima).toUpperCase() || "W";
-
-  return (
-    <span
-      aria-hidden
-      className="grid h-24 w-24 place-items-center rounded-full border border-[var(--wp-gold)] bg-[var(--wp-red)] font-display text-2xl font-extrabold text-[var(--wp-gold-soft)]"
-    >
-      {iniciais}
-    </span>
   );
 }
