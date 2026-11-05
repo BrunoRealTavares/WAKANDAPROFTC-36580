@@ -1,9 +1,11 @@
 /**
  * CONTRATO: conteúdo público com fallback seguro.
- * Versão stub (Fase 1): retorna vazio enquanto o banco da intranet
- * não estiver pronto. A versão final lê as tabelas publicadas via DB.
+ * Versão stub (Fase 2): lista e galeria retornam vazio e membros vêm do
+ * arquivo `src/data/timeline.ts` enquanto o banco da intranet não está
+ * pronto. A versão final lê as tabelas publicadas via DB.
  */
 
+import { timelineTemporada } from "@/data/timeline";
 
 export type PostPublico = {
   id: number;
@@ -67,9 +69,13 @@ export async function getPublishedPartners(): Promise<ParceiroPublico[]> {
 }
 
 export async function getTimelineEvents(): Promise<EventoLinhaTempo[]> {
-  return [
-    { id: 0, titulo: "Formação da equipe", data: null, descricao: "Informação pendente — a equipe confirma os marcos em construção.", ordem: 0 },
-  ];
+  return timelineTemporada.map((evento, i) => ({
+    id: i,
+    titulo: evento.titulo,
+    data: evento.data,
+    descricao: evento.descricao,
+    ordem: evento.ordem,
+  }));
 }
 
 export async function getSiteSettings(): Promise<SiteSettings> {
