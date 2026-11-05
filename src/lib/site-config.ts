@@ -14,6 +14,9 @@ export const siteConfig = {
   cicloTemporada: "2026–27",
   metaTecnica: "FTC / 36580 / BIOBUZZ / 2026–27",
 
+  /** URL base do site público — atualizar quando o domínio final for confirmado */
+  urlSite: "http://localhost:3000",
+
   /** ⚠️ Confirmar nomenclatura institucional oficial antes de publicar */
   nomeEscolaPendente: "Escola SESI Milton Santos", // possivelmente "ESI Milton Santos"
 

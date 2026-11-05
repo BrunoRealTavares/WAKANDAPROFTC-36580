@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import siteConfig from "@/lib/site-config";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.urlSite),
   title: {
     default: "Wakanda Pro 36580 — Equipe de Robótica FTC",
     template: "%s | Wakanda Pro 36580",
