@@ -1,26 +1,121 @@
 @import "tailwindcss";
 
+/* ============================================================
+   WAKANDA PRO 36580 — Sistema de tokens visuais
+   Fundo: #120708 · Vinho: #8b1c2b · Dourado: #e0b050 · Texto: #f5ecec
+   ============================================================ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Fundos */
+  --wp-void: #120708;
+  --wp-coal: #1c0e11;
+  --wp-graphite: #2a1218;
+  --wp-edge: #3d1822;
+
+  /* Acento */
+  --wp-red: #8b1c2b;
+  --wp-red-deep: #6d1420;
+  --wp-red-glow: rgba(139, 28, 43, 0.35);
+
+  /* Texto */
+  --wp-white: #f5ecec;
+  --wp-silver: #e9d8d3;
+  --wp-silver-mute: #cdb5ad;
+  --wp-silver-dim: #a08a83;
+
+  /* Dourado */
+  --wp-gold: #e0b050;
+  --wp-gold-soft: #f4d8a0;
+
+  /* Detalhes */
+  --wp-cyan: #35c9de;
+  --wp-purple: #7b5ce0;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-void: var(--wp-void);
+  --color-coal: var(--wp-coal);
+  --color-graphite: var(--wp-graphite);
+  --color-edge: var(--wp-edge);
+  --color-red: var(--wp-red);
+  --color-red-deep: var(--wp-red-deep);
+  --color-silver: var(--wp-silver);
+  --color-silver-mute: var(--wp-silver-mute);
+  --color-silver-dim: var(--wp-silver-dim);
+  --color-gold: var(--wp-gold);
+  --color-gold-soft: var(--wp-gold-soft);
+  --color-cyan: var(--wp-cyan);
+  --color-purple: var(--wp-purple);
+  --color-white: var(--wp-white);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--wp-void);
+  color: var(--wp-white);
+  font-family: var(--font-geist-sans), system-ui, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--wp-red);
+  color: var(--wp-white);
+}
+
+.font-display {
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+}
+
+.tech-meta {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--wp-silver-dim);
+}
+
+.wp-grid-bg {
+  background-image:
+    linear-gradient(var(--wp-edge) 1px, transparent 1px),
+    linear-gradient(90deg, var(--wp-edge) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 30%, transparent 75%);
+}
+
+:focus-visible {
+  outline: 2px solid var(--wp-cyan);
+  outline-offset: 3px;
+}
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--wp-void); }
+::-webkit-scrollbar-thumb { background: var(--wp-edge); border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: var(--wp-red-deep); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* Keyframes de identidade */
+@keyframes wp-pulse {
+  0%, 100% { opacity: 1; transform: translateY(0); }
+  50% { opacity: 0.92; transform: translateY(-6px); }
+}
+
+@keyframes wp-scroll-cue {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(8px); opacity: 0.3; }
 }
