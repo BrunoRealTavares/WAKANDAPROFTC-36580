@@ -88,13 +88,20 @@ export default function RobotPage() {
               </h2>
               <div className="mt-6 space-y-4 text-[var(--wp-silver-mute)]">
                 <p>
-                  Na ficção derivada do universo de Wakanda, o Vibranium é um
-                  metal lendário: leve, inquebrável e cheio de energia. Escolhemos
-                  o nome por essa promessa — um robô resistente, ágil e sempre
-                  pronto para o próximo desafio.
+                  Na ficção de Wakanda, o Vibranium é um metal vindo de um
+                  meteorito: leve, quase indestrutível e capaz de absorver a
+                  energia de golpes e explosões em vez de transferi-la. É a
+                  base da tecnologia de Wakanda — e aparece no escudo do
+                  Capitão América e no uniforme do Pantera Negra.
                 </p>
                 <p>
-                  A referência é puramente simbólica e vem do mesmo lugar que a no mesmo lugar da
+                  É essa ideia que a gente leva para o campo: absorver os
+                  desafios da temporada — tempo curto, peças que falham, código
+                  que quebra — e transformá-los em força real: método, testes e
+                  trabalho de equipe.
+                </p>
+                <p>
+                  A referência é puramente simbólica e nasce no mesmo lugar da
                   inspiração da equipe: afrofuturismo e imaginação a serviço da
                   engenharia. O metal fictício não entra no bill of materials —
                   o que entra é alumínio, parafuso, motor e lógica.
