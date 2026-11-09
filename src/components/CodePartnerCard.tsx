@@ -50,7 +50,7 @@ export function CodePartnerCard({
             alt={logoAlt}
             width={logoWidth}
             height={logoHeight}
-            className="h-16 w-auto object-contain drop-shadow-[0_0_14px_rgba(0,0,0,0.6)]"
+            className="h-20 w-auto object-contain drop-shadow-[0_0_14px_rgba(0,0,0,0.6)]"
           />
         </div>
 

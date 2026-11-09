@@ -84,7 +84,7 @@ export default function TeamPage() {
                 key={m.nome}
                 className="rounded-xl border border-[var(--wp-edge)] bg-[var(--wp-coal)] p-6 lg:p-8"
               >
-                <MembroAvatarBadge nome={m.nome} />
+                <MembroAvatarBadge nome={m.nome} tamanho="lg" />
                 <h3 className="font-display mt-5 text-2xl font-extrabold text-[var(--wp-white)]">
                   {m.nome}
                 </h3>
@@ -115,7 +115,7 @@ export default function TeamPage() {
                       key={m.nome}
                       className="rounded-xl border border-[var(--wp-edge)] bg-[var(--wp-coal)] p-6 transition-colors hover:border-[var(--wp-red-deep)]"
                     >
-                      <MembroAvatarBadge nome={m.nome} />
+                      <MembroAvatarBadge nome={m.nome} tamanho="sm" />
                       <h3 className="mt-4 font-semibold text-[var(--wp-white)]">
                         {m.nome}
                       </h3>

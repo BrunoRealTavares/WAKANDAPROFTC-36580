@@ -66,13 +66,13 @@ export default function BioBuzzPage() {
           <p className="tech-meta mb-12">O DESAFIO DA TEMPORADA</p>
           <div className="grid gap-10 lg:grid-cols-2">
             <article className="rounded-xl border border-[var(--wp-edge)] bg-[var(--wp-void)] p-8 lg:p-10">
-              <div className="mx-auto flex items-center justify-center mb-6 rounded-xl border border-[var(--wp-gold)]/30 bg-[var(--wp-coal)] p-6">
+              <div className="mx-auto flex items-center justify-center mb-6 rounded-xl border border-[var(--wp-gold)]/30 bg-[var(--wp-coal)] p-8">
                 <Image
                   src="/img/FIRST-TECH-CHALLENGE.png.png"
                   alt="Logo da FIRST Tech Challenge"
                   width={356}
                   height={280}
-                  className="h-auto w-40 lg:w-60 object-contain"
+                  className="h-auto w-48 lg:w-64 object-contain"
                 />
               </div>
               <h3 className="font-display mt-6 text-2xl font-extrabold text-[var(--wp-white)]">
@@ -86,7 +86,7 @@ export default function BioBuzzPage() {
               </p>
             </article>
             <article className="rounded-xl border border-[var(--wp-edge)] bg-[var(--wp-void)] p-8 lg:p-10">
-              <div className="mx-auto flex items-center justify-center mb-6 rounded-xl border border-[var(--wp-gold)]/30 bg-[var(--wp-coal)] p-6">
+              <div className="mx-auto flex items-center justify-center mb-6 rounded-xl border border-[var(--wp-gold)]/30 bg-[var(--wp-coal)] p-8">
                 <Image
                   src="/img/logo-biobuzz.png.png"
                   alt="Logo do desafio BIOBUZZ 2026–27"
