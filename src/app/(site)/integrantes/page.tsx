@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
-import siteConfig from "@/lib/site-config";
-import { getPublishedMembers } from "@/lib/public-content";
+import { equipe, type GrupoEquipe, type MembroEquipe } from "@/data/equipe";
+import { MembroAvatarBadge } from "@/components/MembroAvatarBadge";
 
 export const metadata: Metadata = {
   title: "Integrantes | Wakanda Pro 36580",
@@ -9,16 +8,19 @@ export const metadata: Metadata = {
     "Quem compõe a Wakanda Pro: treinadora e integrantes da equipe de robótica de Camaçari/BA em sua primeira temporada na FIRST Tech Challenge.",
 };
 
-type Membro = Awaited<ReturnType<typeof getPublishedMembers>>[number];
-
-function iniciais(nome: string) {
-  const partes = nome.trim().split(/\s+/).filter(Boolean);
-  const primeira = partes[0]?.[0] ?? "";
-  const ultima = partes.length > 1 ? partes[partes.length - 1][0] : "";
-  return (primeira + ultima).toUpperCase() || "W";
-}
-
 export default function MembersPage() {
+  const grupos: GrupoEquipe[] = Array.from(
+    new Set(
+      equipe
+        .map((m) => m.grupo)
+        .filter((g): g is GrupoEquipe => Boolean(g)),
+    ),
+  );
+
+  const lideranca = equipe.filter(
+    (m) => m.papel === "tecnica" || m.papel === "mentora",
+  );
+
   return (
     <>
       <section className="py-20 lg:py-28">
@@ -36,40 +38,69 @@ export default function MembersPage() {
 
       <section className="border-t border-[var(--wp-edge)] py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
-          <p className="tech-meta text-[var(--wp-gold-soft)]">TREINADORA</p>
-          <article className="mt-6 grid gap-8 rounded-xl border border-[var(--wp-gold)] bg-[var(--wp-coal)] p-8 lg:grid-cols-[auto_1fr] lg:items-center lg:p-10">
-            <span
-              aria-hidden
-              className="grid h-20 w-20 place-items-center rounded-full border border-[var(--wp-gold)] bg-[var(--wp-graphite)] font-display text-3xl font-extrabold text-[var(--wp-gold-soft)]"
-            >
-              ?
-            </span>
-            <div>
-              <h2 className="font-display text-2xl font-extrabold text-[var(--wp-white)] lg:text-3xl">
-                {siteConfig.treinadora.nome ?? "Nome pendente de confirmação"}
-              </h2>
-              <p className="mt-4 max-w-2xl text-[var(--wp-silver-mute)]">
-                {siteConfig.treinadora.biografiaPendente}
-              </p>
-            </div>
-          </article>
+          <p className="tech-meta text-[var(--wp-gold-soft)]">TREINADORA E TÉCNICA</p>
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            {lideranca.map((m) => (
+              <article
+                key={m.nome}
+                className="flex items-center gap-6 rounded-xl border border-[var(--wp-edge)] bg-[var(--wp-coal)] p-6 lg:p-8"
+              >
+                <MembroAvatarBadge nome={m.nome} foto={m.foto} tamanho="lg" />
+                <div>
+                  <h2 className="font-display text-2xl font-extrabold text-[var(--wp-white)] lg:text-3xl">
+                    {m.nome}
+                  </h2>
+                  <p
+                    className={
+                      m.papel === "tecnica"
+                        ? "tech-meta mt-2 text-[var(--wp-red)]"
+                        : "tech-meta mt-2 text-[var(--wp-gold-soft)]"
+                    }
+                  >
+                    {m.papel === "tecnica" ? "TÉCNICA · LIDERANÇA" : "MENTORA · MENTORIA"}
+                  </p>
+                  {m.frase && (
+                    <p className="mt-4 text-[var(--wp-silver-mute)]">{m.frase}</p>
+                  )}
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="border-t border-[var(--wp-edge)] py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <p className="tech-meta mb-12">INTEGRANTES</p>
-          <Suspense
-            fallback={
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {[0, 1, 2, 3, 4, 5].map((i) => (
-                  <div key={i} className="h-44 animate-pulse rounded-xl bg-[var(--wp-coal)]" />
-                ))}
-              </div>
-            }
-          >
-            <MembersGrid />
-          </Suspense>
+
+          {grupos.map((grupo) => (
+            <div key={grupo} className="mb-16">
+              <p className="tech-meta text-[var(--wp-gold-soft)]">GRUPO {grupo}</p>
+              <ul className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {equipe
+                  .filter((m) => m.grupo === grupo && m.papel === "membro")
+                  .map((m: MembroEquipe) => (
+                    <li
+                      key={m.nome}
+                      className="rounded-xl border border-[var(--wp-edge)] bg-[var(--wp-coal)] p-6 transition-colors hover:border-[var(--wp-red-deep)]"
+                    >
+                      <MembroAvatarBadge nome={m.nome} foto={m.foto} tamanho="sm" />
+                      <h3 className="mt-4 font-semibold text-[var(--wp-white)]">
+                        {m.nome}
+                      </h3>
+                      <p className="tech-meta mt-1 text-[var(--wp-silver-mute)]">
+                        {m.grupo}
+                      </p>
+                      {m.frase && (
+                        <p className="mt-2 text-sm text-[var(--wp-silver-mute)]">
+                          {m.frase}
+                        </p>
+                      )}
+                    </li>
+                  ))}
+              </ul>
+            </div>
+          ))}
 
           <p className="mt-12 max-w-3xl border-l-2 border-[var(--wp-cyan)] pl-4 text-sm text-[var(--wp-silver-dim)]">
             Fotos e identificações de menores dependem de autorização. Telefones,
@@ -78,55 +109,5 @@ export default function MembersPage() {
         </div>
       </section>
     </>
-  );
-}
-
-async function MembersGrid() {
-  const membros = await getPublishedMembers();
-
-  if (membros.length === 0) {
-    return (
-      <div className="rounded-xl border border-dashed border-[var(--wp-edge)] bg-[var(--wp-coal)] p-10 text-center lg:p-14">
-        <p className="font-display mx-auto max-w-xl text-xl font-extrabold text-[var(--wp-silver)] lg:text-2xl">
-          Apresentação dos integrantes em preparação.
-        </p>
-        <p className="mt-3 text-sm text-[var(--wp-silver-dim)]">
-          Cada perfil chega aqui conforme os integrantes e suas famílias
-          autorizarem a publicação.
-        </p>
-      </div>
-    );
-  }
-
-  return (
-    <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {membros.map((m: Membro) => (
-        <li
-          key={m.id}
-          className="rounded-xl border border-[var(--wp-edge)] bg-[var(--wp-coal)] p-6 transition-colors hover:border-[var(--wp-red-deep)]"
-        >
-          <div className="flex items-center gap-4">
-            <span
-              aria-hidden
-              className="grid h-14 w-14 shrink-0 place-items-center rounded-full border border-[var(--wp-edge)] bg-[var(--wp-graphite)] font-display text-lg font-extrabold text-[var(--wp-red)]"
-            >
-              {iniciais(m.nome)}
-            </span>
-            <div>
-              <h3 className="font-semibold text-[var(--wp-white)]">{m.nome}</h3>
-              <p className="tech-meta mt-1">{m.funcao}</p>
-            </div>
-          </div>
-          <p className="mt-4">
-            <span className="inline-block rounded-full border border-[var(--wp-edge)] px-3 py-1 text-xs text-[var(--wp-cyan)]">
-              {m.area}
-            </span>
-          </p>
-          {m.bio && (
-            <p className="mt-4 text-sm text-[var(--wp-silver-mute)]">{m.bio}</p>
-          )}
-        </li>
-      ))}
-    </ul>
   );
 }
