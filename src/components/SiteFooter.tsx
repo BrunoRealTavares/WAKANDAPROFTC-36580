@@ -1,4 +1,5 @@
 ﻿import Link from "next/link";
+import { contato } from "@/data/contato";
 import siteConfig from "@/lib/site-config";
 
 export function SiteFooter() {
@@ -31,15 +32,20 @@ export function SiteFooter() {
 
         <div>
           <p className="tech-meta text-[var(--wp-gold-soft)]">Contato</p>
-          {siteConfig.emailPublico ? (
-            <a className="mt-3 block text-sm hover:text-[var(--wp-white)]" href={`mailto:${siteConfig.emailPublico}`}>
-              {siteConfig.emailPublico}
-            </a>
-          ) : (
-            <p className="mt-3 text-sm italic text-[var(--wp-silver-mute)]">
-              Canal de contato em preparação — em breve.
-            </p>
-          )}
+          <a
+            className="mt-3 block text-sm hover:text-[var(--wp-white)]"
+            href={`mailto:${contato.email}`}
+          >
+            {contato.email}
+          </a>
+          <a
+            className="mt-2 block text-sm hover:text-[var(--wp-white)]"
+            href={contato.redesSociais.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram @wakandaproftc ↗
+          </a>
           <p className="mt-8 text-xs text-[var(--wp-silver-dim)]">
             © {year} {siteConfig.nomeEquipe} {siteConfig.numeroFtc}. Projeto educacional independente.
             Inspirado em temas de ficção científica; sem vínculo com a Marvel.

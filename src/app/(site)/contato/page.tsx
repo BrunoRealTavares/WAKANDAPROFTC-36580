@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import siteConfig from "@/lib/site-config";
+import { contato } from "@/data/contato";
 import { ContactForm } from "./ContactForm";
 
 export const metadata: Metadata = {
@@ -7,12 +7,6 @@ export const metadata: Metadata = {
   description:
     "Fale com a Wakanda Pro, equipe FTC 36580 de Camaçari/BA: discussão geral, interesse em patrocínio, imprensa ou outros assuntos da temporada BIOBUZZ.",
 };
-
-const canaisRedes = [
-  { nome: "Instagram", ativo: siteConfig.redesSociais.instagram },
-  { nome: "YouTube", ativo: siteConfig.redesSociais.youtube },
-  { nome: "LinkedIn", ativo: siteConfig.redesSociais.linkedin },
-];
 
 export default function ContactPage() {
   return (
@@ -38,45 +32,29 @@ export default function ContactPage() {
             <div className="mt-6 space-y-6">
               <div className="rounded-xl border border-[var(--wp-edge)] bg-[var(--wp-coal)] p-6">
                 <p className="tech-meta">E-MAIL OFICIAL</p>
-                {siteConfig.emailPublico ? (
-                  <a
-                    href={`mailto:${siteConfig.emailPublico}`}
-                    className="mt-3 block text-[var(--wp-silver)] hover:text-[var(--wp-white)]"
-                  >
-                    {siteConfig.emailPublico}
-                  </a>
-                ) : (
-                  <p className="mt-3 text-sm italic text-[var(--wp-silver-mute)]">
-                    Canal de e-mail em preparação.
-                  </p>
-                )}
+                <a
+                  href={`mailto:${contato.email}`}
+                  className="mt-3 block text-[var(--wp-silver)] hover:text-[var(--wp-white)]"
+                >
+                  {contato.email}
+                </a>
               </div>
 
               <div className="rounded-xl border border-[var(--wp-edge)] bg-[var(--wp-coal)] p-6">
                 <p className="tech-meta">REDES SOCIAIS</p>
-                {canaisRedes.every((r) => !r.ativo) ? (
-                  <p className="mt-3 text-sm italic text-[var(--wp-silver-mute)]">
-                    Perfis oficiais em preparação — será anunciado aqui.
-                  </p>
-                ) : (
-                  <ul className="mt-3 space-y-2 text-sm">
-                    {canaisRedes.map(
-                      (r) =>
-                        r.ativo && (
-                          <li key={r.nome}>
-                            <a
-                              href={r.ativo}
-                              target="_blank"
-                              rel="noopener"
-                              className="text-[var(--wp-silver)] hover:text-[var(--wp-white)]"
-                            >
-                              {r.nome} ↗
-                            </a>
-                          </li>
-                        )
-                    )}
-                  </ul>
-                )}
+                <ul className="mt-3 space-y-2 text-sm">
+                  <li>
+                    <a
+                      href={contato.redesSociais.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[var(--wp-silver)] hover:text-[var(--wp-white)]"
+                      aria-label="Instagram da Wakanda Pro (abre em nova aba)"
+                    >
+                      Instagram @wakandaproftc ↗
+                    </a>
+                  </li>
+                </ul>
               </div>
 
               <p className="border-l-2 border-[var(--wp-cyan)] pl-4 text-sm text-[var(--wp-silver-dim)]">
