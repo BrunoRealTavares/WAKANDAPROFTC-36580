@@ -39,4 +39,6 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
+# dados locais (banco sqlite, uploads privados, segredo de sessao)
+data/
+.credencial-admin.txt

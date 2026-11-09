@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "db:create": "node scripts/db-create.mjs",
+    "create-admin": "node scripts/create-admin.mjs",
+    "smoke-db": "node scripts/smoke-db.mjs"
   },
   "dependencies": {
     "@libsql/client": "^0.18.0",
