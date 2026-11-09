@@ -65,46 +65,62 @@ export default function BioBuzzPage() {
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <p className="tech-meta mb-12">O DESAFIO DA TEMPORADA</p>
           <div className="grid gap-10 lg:grid-cols-2">
-            <article className="rounded-xl border border-[var(--wp-edge)] p-8">
-              <div className="grid place-items-center rounded-lg bg-[var(--wp-graphite)] p-6">
+            <article className="rounded-xl border border-[var(--wp-edge)] bg-[var(--wp-void)] p-8 lg:p-10">
+              <div className="mx-auto flex items-center justify-center mb-6 rounded-xl border border-[var(--wp-gold)]/30 bg-[var(--wp-coal)] p-6">
                 <Image
-                  src="/img/logo-liga-robotica-sesi-bahia.jpg"
-                  alt="Logo da Liga Robótica SESI Bahia"
-                  width={500}
-                  height={500}
-                  className="h-auto w-40 lg:w-52"
+                  src="/img/logo-first-tech-challenge.png"
+                  alt="Logo da FIRST Tech Challenge"
+                  width={356}
+                  height={280}
+                  className="h-auto w-40 lg:w-60 object-contain"
                 />
               </div>
               <h3 className="font-display mt-6 text-2xl font-extrabold text-[var(--wp-white)]">
                 A estreia da Wakanda Pro
               </h3>
-              <p className="mt-3 text-sm text-[var(--wp-silver-mute)]">
+              <p className="mt-3 text-sm text-[var(--wp-silver-mute)] leading-relaxed">
                 Nossa equipe entra no circuito com o número FTC 36580 e com a
                 responsabilidade de representar {siteConfig.nomeEscolaPendente},
                 de {siteConfig.cidade}/{siteConfig.estado}, em toda a trajetória
                 da temporada.
               </p>
             </article>
-            <article className="rounded-xl border border-[var(--wp-edge)] p-8">
-              <div className="grid place-items-center rounded-lg bg-white p-6">
+            <article className="rounded-xl border border-[var(--wp-edge)] bg-[var(--wp-void)] p-8 lg:p-10">
+              <div className="mx-auto flex items-center justify-center mb-6 rounded-xl border border-[var(--wp-gold)]/30 bg-[var(--wp-coal)] p-6">
                 <Image
                   src="/img/logo-biobuzz.jpg"
                   alt="Logo do desafio BIOBUZZ 2026–27"
                   width={447}
                   height={447}
-                  className="h-auto w-40 lg:w-52"
+                  className="h-auto w-48 lg:w-56 object-contain"
                 />
               </div>
               <h3 className="font-display mt-6 text-2xl font-extrabold text-[var(--wp-white)]">
                 O tema BIOBUZZ
               </h3>
-              <p className="mt-3 text-sm text-[var(--wp-silver-mute)]">
+              <p className="mt-3 text-sm text-[var(--wp-silver-mute)] leading-relaxed">
                 O desafio da temporada traz um campo cheio de missões inspiradas
                 no mundo natural: colheitas, polinização e o equilíbrio entre
                 organismo, tecnologia e ecologia. A cada repetição, a gente
                 aprende que a engenharia também cuida do planeta.
               </p>
             </article>
+          </div>
+
+          <div className="mt-12 rounded-xl border border-[var(--wp-edge)] bg-[var(--wp-coal)] p-8 lg:p-12">
+            <p className="tech-meta text-[var(--wp-gold-soft)] mb-3">PLATAFORMA OFICIAL</p>
+            <p className="mb-6 max-w-2xl text-sm text-[var(--wp-silver-mute)] leading-relaxed">
+              Para regras oficiais, cronograma e pontuação da temporada, acesse
+              a plataforma da FIRST Tech Challenge:
+            </p>
+            <a
+              href="https://www.firstinspires.org/programs/ftc/"
+              target="_blank"
+              rel="noopener"
+              className="inline-flex h-11 items-center justify-center rounded border border-[var(--wp-gold)] px-7 py-3 font-mono text-xs uppercase tracking-[0.18em] text-[var(--wp-gold-soft)] transition-colors hover:bg-[var(--wp-gold)] hover:text-[var(--wp-void)]"
+            >
+              https://www.firstinspires.org/programs/ftc/ →
+            </a>
           </div>
 
           <p className="mt-12 max-w-3xl border-l-2 border-[var(--wp-cyan)] pl-4 text-sm text-[var(--wp-silver-dim)]">

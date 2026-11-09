@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { MembroAvatar } from "@/components/MembroAvatar";
+import { MembroAvatarBadge } from "@/components/MembroAvatarBadge";
 import { equipe, type GrupoEquipe } from "@/data/equipe";
 import siteConfig from "@/lib/site-config";
 
@@ -84,7 +84,7 @@ export default function TeamPage() {
                 key={m.nome}
                 className="rounded-xl border border-[var(--wp-edge)] bg-[var(--wp-coal)] p-6 lg:p-8"
               >
-                <MembroAvatar nome={m.nome} foto={m.foto} />
+                <MembroAvatarBadge nome={m.nome} />
                 <h3 className="font-display mt-5 text-2xl font-extrabold text-[var(--wp-white)]">
                   {m.nome}
                 </h3>
@@ -115,7 +115,7 @@ export default function TeamPage() {
                       key={m.nome}
                       className="rounded-xl border border-[var(--wp-edge)] bg-[var(--wp-coal)] p-6 transition-colors hover:border-[var(--wp-red-deep)]"
                     >
-                      <MembroAvatar nome={m.nome} foto={m.foto} />
+                      <MembroAvatarBadge nome={m.nome} />
                       <h3 className="mt-4 font-semibold text-[var(--wp-white)]">
                         {m.nome}
                       </h3>

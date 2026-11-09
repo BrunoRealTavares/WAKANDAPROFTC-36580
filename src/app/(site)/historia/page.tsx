@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Suspense } from "react";
 import { getTimelineEvents } from "@/lib/public-content";
 
@@ -23,15 +24,26 @@ export default function HistoryPage() {
     <>
       <section className="py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
-          <p className="tech-meta">LINHA DO TEMPO / EQUIPE 36580</p>
+          <p className="tech-meta">NOSSA HISTÓRIA</p>
           <h1 className="font-display mt-4 text-4xl font-extrabold text-[var(--wp-white)] sm:text-5xl lg:text-6xl">
-            Nossa história
+            Primeiro ano da escola na FTC.
+            <span className="block text-[var(--wp-gold-soft)] mt-3">
+              E não nos conformamos com pouco.
+            </span>
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-[var(--wp-silver-mute)]">
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--wp-silver-mute)]">
             Toda grande engenharia começa com um rabisco no papel. Aqui
             registramos, etapa por etapa, como a Wakanda Pro saiu da ideia e
             entrou em campo.
           </p>
+          <div className="mt-10">
+            <Link
+              href="/historia"
+              className="inline-flex h-11 items-center rounded border border-[var(--wp-edge)] px-6 font-mono text-xs uppercase tracking-[0.18em] text-[var(--wp-silver-mute)] transition-colors hover:border-[var(--wp-gold)] hover:text-[var(--wp-gold-soft)]"
+            >
+              Ver a linha do tempo completa →
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -74,12 +86,12 @@ async function Timeline() {
                 aria-hidden
                 className="absolute -left-[40px] top-1.5 h-3.5 w-3.5 rounded-full border border-dashed border-[var(--wp-silver-dim)] bg-[var(--wp-void)]"
               />
-              <p className="tech-meta">ETAPA {String(i + 1).padStart(2, "0")} · DATA A PREENCHER</p>
+              <p className="tech-meta">ETAPA {String(i + 1).padStart(2, "0")} · 2026</p>
               <h3 className="font-display mt-2 text-xl font-extrabold text-[var(--wp-silver)]">
                 {etapa}
               </h3>
               <p className="mt-1 text-sm italic text-[var(--wp-silver-dim)]">
-                Informação pendente de preenchimento.
+                Primeira temporada da equipe na FTC — ano de fundação, 2026.
               </p>
             </li>
           ))}
@@ -101,8 +113,7 @@ async function Timeline() {
             className="absolute -left-[40px] top-1.5 h-3.5 w-3.5 rounded-full bg-[var(--wp-red)] ring-4 ring-[var(--wp-void)]"
           />
           <p className="tech-meta">
-            ETAPA {String(i + 1).padStart(2, "0")} ·{" "}
-            {evento.data ? evento.data.toUpperCase() : "DATA A PREENCHER"}
+            ETAPA {String(i + 1).padStart(2, "0")} · 2026
           </p>
           <h3 className="font-display mt-2 text-xl font-extrabold text-[var(--wp-white)]">
             {evento.titulo}
