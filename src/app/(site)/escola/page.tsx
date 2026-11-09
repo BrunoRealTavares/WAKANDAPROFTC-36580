@@ -42,7 +42,7 @@ export default function SchoolPage() {
             <figure className="rounded-xl border border-[var(--wp-edge)] p-6">
               <div className="overflow-hidden rounded-lg bg-[var(--wp-graphite)]">
                 <Image
-                  src="/img/BANDEIRA DA BAHIA 1.png"
+                  src="/img/bandeira-bahia.png"
                   alt="Bandeira do estado da Bahia"
                   width={479}
                   height={324}
@@ -59,7 +59,7 @@ export default function SchoolPage() {
             <figure className="rounded-xl border border-[var(--wp-edge)] p-6">
               <div className="overflow-hidden rounded-lg bg-[var(--wp-graphite)]">
                 <Image
-                  src="/img/BANDEIRA DO BRASIL 1.jpg"
+                  src="/img/bandeira-brasil.jpg"
                   alt="Bandeira do Brasil"
                   width={480}
                   height={340}

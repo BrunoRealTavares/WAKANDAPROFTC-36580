@@ -1,4 +1,4 @@
-import { ModernNavbar } from "@/components/ModernNavbar";
+﻿import { ModernNavbar } from "@/components/ModernNavbar";
 import { HolographicUserIcon } from "@/components/HolographicUserIcon";
 import { CodePartnerCard } from "@/components/CodePartnerCard";
 
@@ -35,20 +35,20 @@ export default function ModernoPage() {
 
             <div className="flex flex-col items-center gap-6">
               <p className="tech-meta text-[var(--wp-cyan)] uppercase tracking-[0.2em]">
-                Sistema de Perfil · Ativo
+                Sistema de Perfil Â· Ativo
               </p>
               <h1 className="font-display text-[clamp(2rem,6vw,4rem)] font-extrabold text-[var(--wp-white)] leading-[0.95]">
                 Wakanda Pro
               </h1>
               <p className="max-w-xl text-lg leading-relaxed text-[var(--wp-silver-mute)]">
-                Interface moderna — modo escuro · identidade de alta tecnologia ·<br />
-                pronta para a temporada BIOBUZZ 2026–27.
+                Interface moderna â€” modo escuro Â· identidade de alta tecnologia Â·<br />
+                pronta para a temporada BIOBUZZ 2026â€“27.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Lower section — Team Member Profiles and Partners */}
+        {/* Lower section â€” Team Member Profiles and Partners */}
         <section className="border-t border-[var(--wp-edge)] bg-[var(--wp-void)] py-24 lg:py-32 px-5 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <div className="flex items-center justify-between mb-16">
@@ -56,34 +56,34 @@ export default function ModernoPage() {
                 Team Member Profiles and Partners
               </h2>
               <p className="text-sm text-[var(--wp-silver-dim)] italic">
-                Código aberto · Parcerias da temporada
+                CÃ³digo aberto Â· Parcerias da temporada
               </p>
             </div>
 
             <div className="grid gap-8 sm:grid-cols-3">
               <CodePartnerCard
                 title="FIRST Tech Challenge"
-                logoSrc="/img/FIRST_Tech_challenge_logo.png"
+                logoSrc="/img/FIRST-TECH-CHALLENGE.png.png"
                 logoAlt="Logotipo oficial do FIRST Tech Challenge"
                 logoWidth={356}
                 logoHeight={280}
-                body="Equipe 36580 em estreia na competição FTC — temporada BIOBUZZ. Projeto Vibranium em construção, caderno de engenharia ativo."
+                body="Equipe 36580 em estreia na competiÃ§Ã£o FTC â€” temporada BIOBUZZ. Projeto Vibranium em construÃ§Ã£o, caderno de engenharia ativo."
               />
               <CodePartnerCard
                 title="BIOBUZZ Initiative"
-                logoSrc="/img/logo-biobuzz.jpg"
+                logoSrc="/img/logo-biobuzz.png.png"
                 logoAlt="Logotipo oficial da temporada BIOBUZZ"
                 logoWidth={447}
                 logoHeight={447}
-                body="Simulador 3D do campo BioBuzz e desafios da temporada. Integração com o site público e diário de bordo da equipe."
+                body="Simulador 3D do campo BioBuzz e desafios da temporada. IntegraÃ§Ã£o com o site pÃºblico e diÃ¡rio de bordo da equipe."
               />
               <CodePartnerCard
-                title="LIGA DE ROBÓTICA"
-                logoSrc="/img/logo-liga-robotica-sesi-bahia.jpg"
-                logoAlt="Logotipo escudo da Liga de Robótica SESI Bahia"
+                title="LIGA DE ROBÃ“TICA"
+                logoSrc="/img/liga-sesi-robotica.png.png"
+                logoAlt="Logotipo escudo da Liga de RobÃ³tica SESI Bahia"
                 logoWidth={500}
                 logoHeight={500}
-                body="Liga de Robótica SESI Bahia — suporte institucional à primeira temporada da Escola SESI Milton Santos na FTC."
+                body="Liga de RobÃ³tica SESI Bahia â€” suporte institucional Ã  primeira temporada da Escola SESI Milton Santos na FTC."
               />
             </div>
           </div>
@@ -92,3 +92,4 @@ export default function ModernoPage() {
     </>
   );
 }
+

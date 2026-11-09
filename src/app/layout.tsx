@@ -52,7 +52,7 @@ export const metadata: Metadata = {
       "Equipe de robótica educacional de Camaçari/BA, em estreia na FIRST Tech Challenge — temporada BIOBUZZ 2026–27.",
   },
   icons: {
-    icon: "/img/escudo-wakanda-pro.png",
+    icon: "/img/escudo-wakanda-pro.png.png",
   },
 };
 

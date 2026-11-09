@@ -9,7 +9,7 @@ type ShieldProps = {
 export function Shield({ size = 120, className = "" }: ShieldProps) {
   return (
     <Image
-      src="/img/escudo-wakanda-pro.png"
+      src="/img/escudo-wakanda-pro.png.png"
       alt="Escudo da equipe Wakanda Pro Camaçari-BA"
       width={size}
       height={size}
