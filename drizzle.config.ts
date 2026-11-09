@@ -1,10 +1,11 @@
-import { defineConfig } from "drizzle-kit";
+import type { Config } from "drizzle-kit";
 
-// Banco local: SQLite em arquivo (via libSQL).
-// Migra??o futura para Supabase/Postgres: ver README-BACKEND.md
-export default defineConfig({
+export default {
   dialect: "sqlite",
   schema: "./src/db/schema.ts",
-  out: "./drizzle",
-  dbCredentials: { url: "file:./data/production.db" },
-});
+  dbCredentials: {
+    url: process.env.WP_DB_URL ?? "file:./data/production.db",
+  },
+  verbose: true,
+  strict: true,
+} satisfies Config;
