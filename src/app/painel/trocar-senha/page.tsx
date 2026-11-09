@@ -1,3 +1,6 @@
+export const instant = false;
+// Rota bloqueante por design: le a sessao/cookies em todo request (Cache Components).
+
 import { requireUser } from "@/lib/auth";
 import { ActionForm } from "@/components/painel/action-form";
 import { Campo, inputClasse } from "@/components/painel/ui";

@@ -1,3 +1,6 @@
+export const instant = false;
+// Rota bloqueante por design: le a sessao/cookies em todo request (Cache Components).
+
 import Link from "next/link";
 import { and, count, desc, eq, gte, lte, sql } from "drizzle-orm";
 import { db } from "@/db";

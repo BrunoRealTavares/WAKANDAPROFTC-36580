@@ -1,3 +1,6 @@
+export const instant = false;
+// Rota bloqueante por design: le a sessao/cookies em todo request (Cache Components).
+
 import { desc, eq } from "drizzle-orm";
 import { db } from "@/db";
 import { CATEGORIAS_GALERIA, galleryAssets, partners, posts, siteSettings, teamMembers, timelineEvents } from "@/db/schema";
