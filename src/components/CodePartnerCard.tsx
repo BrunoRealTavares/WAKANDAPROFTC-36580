@@ -7,6 +7,7 @@ type CodePartnerCardProps = {
   logoWidth: number;
   logoHeight: number;
   body?: string;
+  href?: string;
 };
 
 /**
@@ -20,6 +21,7 @@ export function CodePartnerCard({
   logoWidth,
   logoHeight,
   body,
+  href,
 }: CodePartnerCardProps) {
   const placeholder =
     body ??
@@ -62,6 +64,20 @@ export function CodePartnerCard({
           </p>
           <span className="absolute -right-1 bottom-[-10px] text-[var(--wp-gold-soft)]/50 text-[10px]">
             `</span>
+          {href && (
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-1 rounded border border-[var(--wp-edge)] px-3 py-1 font-mono text-xs text-[var(--wp-gold-soft)] hover:bg-[var(--wp-gold)] hover:text-[var(--wp-void)]"
+              aria-label={`Conheça a ${title} (abre em nova aba)`}
+            >
+              Conheça a {title} →
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          )}
         </div>
       </div>
     </article>
