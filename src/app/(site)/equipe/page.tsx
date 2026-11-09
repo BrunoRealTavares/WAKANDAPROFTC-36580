@@ -108,7 +108,7 @@ export default function TeamPage() {
           {grupos.map((grupo) => (
             <div key={grupo} className="mt-16">
               <p className="tech-meta text-[var(--wp-gold-soft)]">GRUPO {grupo}</p>
-              <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <ul className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {equipe
                   .filter((m) => m.grupo === grupo && m.papel === "membro")
                   .map((m) => (
