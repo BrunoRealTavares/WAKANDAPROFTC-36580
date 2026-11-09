@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import siteConfig from "@/lib/site-config";
-import { RedQuestionMark } from "@/components/RedQuestionMark";
+import { EscudoRevelacao } from "@/components/EscudoRevelacao";
 
 export const metadata: Metadata = {
   title: "O Robô | Wakanda Pro 36580",
@@ -50,8 +50,9 @@ export default function RobotPage() {
       <section className="border-t border-[var(--wp-edge)] py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="grid place-items-center rounded-xl border border-dashed border-[var(--wp-edge)] bg-[var(--wp-coal)] px-5 py-16 lg:py-24">
-            <RedQuestionMark size="lg" />
+            <EscudoRevelacao size="lg" />
             <p className="tech-meta mt-8">VISUAL DO ROBÔ NÃO REVELADO</p>
+            <p className="mt-2 text-sm text-[var(--wp-silver-mute)]">Em breve, a revelação</p>
           </div>
 
           <ul className="mt-10 flex flex-wrap justify-center gap-x-10 gap-y-3">
