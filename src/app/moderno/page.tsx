@@ -63,7 +63,7 @@ export default function ModernoPage() {
             <div className="grid gap-8 sm:grid-cols-3">
               <CodePartnerCard
                 title="FIRST Tech Challenge"
-                logoSrc="/img/logo-first-tech-challenge.png"
+                logoSrc="/img/FIRST_Tech_challenge_logo.png"
                 logoAlt="Logotipo oficial do FIRST Tech Challenge"
                 logoWidth={356}
                 logoHeight={280}
