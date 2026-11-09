@@ -1,6 +1,7 @@
 ﻿import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
+import { assets } from "@/data/assets";
 import { HeroMystery } from "@/components/anim/HeroMystery";
 import { Reveal } from "@/components/anim/Reveal";
 import { RevealSequence } from "@/components/anim/RevealSequence";
@@ -172,7 +173,7 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-4">
             <figure className="rounded-xl border border-[var(--wp-edge)] bg-[var(--wp-void)] p-4">
               <Image
-                src="/img/bandeira-bahia.png"
+                src={assets.bandeiraBahia}
                 alt="Bandeira do estado da Bahia"
                 width={479}
                 height={324}
@@ -182,7 +183,7 @@ export default function Home() {
             </figure>
             <figure className="rounded-xl border border-[var(--wp-edge)] bg-[var(--wp-void)] p-4">
               <Image
-                src="/img/bandeira-brasil.jpg"
+                src={assets.bandeiraBrasil}
                 alt="Bandeira do Brasil"
                 width={480}
                 height={340}
@@ -362,3 +363,4 @@ async function LinhaTempoResumo() {
     </ol>
   );
 }
+

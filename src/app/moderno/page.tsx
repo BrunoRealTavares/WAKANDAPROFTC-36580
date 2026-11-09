@@ -1,4 +1,5 @@
 ﻿import { ModernNavbar } from "@/components/ModernNavbar";
+import { assets } from "@/data/assets";
 import { HolographicUserIcon } from "@/components/HolographicUserIcon";
 import { CodePartnerCard } from "@/components/CodePartnerCard";
 
@@ -63,7 +64,7 @@ export default function ModernoPage() {
             <div className="grid gap-8 sm:grid-cols-3">
               <CodePartnerCard
                 title="FIRST Tech Challenge"
-                logoSrc="/img/FIRST-TECH-CHALLENGE.png.png"
+                logoSrc={assets.logoFtc}
                 logoAlt="Logotipo oficial do FIRST Tech Challenge"
                 logoWidth={356}
                 logoHeight={280}
@@ -71,7 +72,7 @@ export default function ModernoPage() {
               />
               <CodePartnerCard
                 title="BIOBUZZ Initiative"
-                logoSrc="/img/logo-biobuzz.png.png"
+                logoSrc={assets.logoBiobuzz}
                 logoAlt="Logotipo oficial da temporada BIOBUZZ"
                 logoWidth={447}
                 logoHeight={447}
@@ -79,7 +80,7 @@ export default function ModernoPage() {
               />
               <CodePartnerCard
                 title="LIGA DE ROBÃ“TICA"
-                logoSrc="/img/liga-sesi-robotica.png.png"
+                logoSrc={assets.logoLigaRobotica}
                 logoAlt="Logotipo escudo da Liga de RobÃ³tica SESI Bahia"
                 logoWidth={500}
                 logoHeight={500}
@@ -92,4 +93,5 @@ export default function ModernoPage() {
     </>
   );
 }
+
 

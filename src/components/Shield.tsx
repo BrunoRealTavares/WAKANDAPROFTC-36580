@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { assets } from "@/data/assets";
 
 type ShieldProps = {
   /** Tamanho em pixels (a imagem base é quadrada). */
@@ -9,7 +10,7 @@ type ShieldProps = {
 export function Shield({ size = 120, className = "" }: ShieldProps) {
   return (
     <Image
-      src="/img/escudo-wakanda-pro.png.png"
+      src={assets.escudo}
       alt="Escudo da equipe Wakanda Pro Camaçari-BA"
       width={size}
       height={size}

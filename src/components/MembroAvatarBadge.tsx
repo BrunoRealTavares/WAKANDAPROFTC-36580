@@ -1,4 +1,5 @@
 ﻿import Image from "next/image";
+import { assets } from "@/data/assets";
 
 /**
  * MembroAvatarBadge — avatar circular do membro da equipe.
@@ -71,7 +72,7 @@ export function MembroAvatarBadge({
       {/* Badge Liga Robótica — bottom-left dentro do círculo */}
       <div className={`absolute ${dims.offset.split(' ')[0]} ${dims.offset.split(' ')[1]} ${dims.offset.split(' ')[2]} ${dims.offset.split(' ')[3]} z-20 rounded-full border-2 border-[var(--wp-gold-soft)] bg-[var(--wp-void)] flex items-center justify-center shadow-[0_0_12px_rgba(224,176,80,0.4)]`}>
         <Image
-          src="/img/liga-sesi-robotica.png.png"
+          src={assets.logoLigaRobotica}
           alt="Liga Robótica SESI Bahia"
           width={48}
           height={48}
@@ -82,7 +83,7 @@ export function MembroAvatarBadge({
       {/* Badge Wakanda Pro — bottom-right dentro do círculo */}
       <div className={`absolute ${dims.offset.split(' ')[0]} ${dims.offset.split(' ')[2]} z-20 rounded-full border-2 border-[var(--wp-gold-soft)] bg-[var(--wp-void)] flex items-center justify-center shadow-[0_0_12px_rgba(224,176,80,0.4)]`}>
         <Image
-          src="/img/escudo-wakanda-pro.png.png"
+          src={assets.escudo}
           alt="Escudo Wakanda Pro"
           width={48}
           height={48}

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { assets } from "@/data/assets";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -19,7 +20,7 @@ export function ModernNavbar() {
         {/* Top-left header: escudo + WAKANDA PRO + lâmpada */}
         <Link href="/" className="flex items-center gap-3 group">
           <Image
-            src="/img/escudo-wakanda-pro.png"
+            src={assets.escudo}
             alt="Escudo Wakanda Pro"
             width={32}
             height={32}

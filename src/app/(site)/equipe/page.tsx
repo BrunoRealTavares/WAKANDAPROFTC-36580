@@ -1,28 +1,29 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { MembroAvatarBadge } from "@/components/MembroAvatarBadge";
+import { assets } from "@/data/assets";
 import { equipe, type GrupoEquipe } from "@/data/equipe";
 import siteConfig from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "A Equipe | Wakanda Pro 36580",
   description:
-    "Quem é a Wakanda Pro, equipe de robótica estudantil de Camaçari/BA em estreia na FIRST Tech Challenge: origem do nome, número 36580, missão, visão, valores e filosofia.",
+    "Quem Ã© a Wakanda Pro, equipe de robÃ³tica estudantil de CamaÃ§ari/BA em estreia na FIRST Tech Challenge: origem do nome, nÃºmero 36580, missÃ£o, visÃ£o, valores e filosofia.",
 };
 
 const valores = [
-  "Colaboração acima de protagonismo individual",
-  "Disciplina técnica e ética em cada projeto",
+  "ColaboraÃ§Ã£o acima de protagonismo individual",
+  "Disciplina tÃ©cnica e Ã©tica em cada projeto",
   "Orgulho da nossa origem e da nossa gente",
   "Conhecimento compartilhado, nunca guardado",
 ];
 
 const objetivos = [
-  "Estrear na FIRST Tech Challenge com método, constância e aprendizado real",
-  "Construir e programar um robô competitivo, confiável e bem documentado",
-  "Levar ciência e tecnologia a mais estudantes da nossa região",
-  "Formar uma base de engenharia que sobreviva além da primeira temporada",
+  "Estrear na FIRST Tech Challenge com mÃ©todo, constÃ¢ncia e aprendizado real",
+  "Construir e programar um robÃ´ competitivo, confiÃ¡vel e bem documentado",
+  "Levar ciÃªncia e tecnologia a mais estudantes da nossa regiÃ£o",
+  "Formar uma base de engenharia que sobreviva alÃ©m da primeira temporada",
 ];
 
 export default function TeamPage() {
@@ -44,19 +45,19 @@ export default function TeamPage() {
         <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[1.4fr_auto] lg:items-center lg:px-8">
           <div>
             <p className="tech-meta">
-              {`A EQUIPE / FTC ${siteConfig.numeroFtc} / ${siteConfig.cidade.toUpperCase()} · ${siteConfig.estado.toUpperCase()}`}
+              {`A EQUIPE / FTC ${siteConfig.numeroFtc} / ${siteConfig.cidade.toUpperCase()} Â· ${siteConfig.estado.toUpperCase()}`}
             </p>
             <h1 className="font-display mt-4 text-4xl font-extrabold text-[var(--wp-white)] sm:text-5xl lg:text-6xl">
               {siteConfig.nomeEquipe}
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-[var(--wp-silver-mute)]">
-              Somos uma equipe de robótica feita por estudantes: mãos na moldura,
-              código no notebook e uma certeza que não sai da cabeça — talento
-              existe em todo lugar, o que falta é oportunidade. A nossa chegou.
+              Somos uma equipe de robÃ³tica feita por estudantes: mÃ£os na moldura,
+              cÃ³digo no notebook e uma certeza que nÃ£o sai da cabeÃ§a â€” talento
+              existe em todo lugar, o que falta Ã© oportunidade. A nossa chegou.
             </p>
           </div>
           <Image
-            src="/img/escudo-wakanda-pro.png"
+            src={assets.escudo}
             alt={`Escudo da equipe ${siteConfig.nomeEquipe}`}
             width={240}
             height={240}
@@ -71,11 +72,11 @@ export default function TeamPage() {
             EQUIPE / FTC {siteConfig.numeroFtc} / {siteConfig.cidade.toUpperCase()}
           </p>
           <h2 className="font-display mt-3 max-w-3xl text-3xl font-extrabold text-[var(--wp-white)] lg:text-4xl">
-            Mãos na moldura, código no notebook
+            MÃ£os na moldura, cÃ³digo no notebook
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-[var(--wp-silver-mute)]">
-            A liderança técnica e a mentoria conduzem; os grupos executam. A
-            ordem é deliberada: primeiro o cuidado, depois o time.
+            A lideranÃ§a tÃ©cnica e a mentoria conduzem; os grupos executam. A
+            ordem Ã© deliberada: primeiro o cuidado, depois o time.
           </p>
 
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
@@ -95,7 +96,7 @@ export default function TeamPage() {
                       : "tech-meta mt-2 text-[var(--wp-gold-soft)]"
                   }
                 >
-                  {m.papel === "tecnica" ? "Técnica · Liderança" : "Mentora · Mentoria"}
+                  {m.papel === "tecnica" ? "TÃ©cnica Â· LideranÃ§a" : "Mentora Â· Mentoria"}
                 </p>
                 {m.frase && (
                   <p className="mt-4 text-[var(--wp-silver-mute)]">{m.frase}</p>
@@ -136,35 +137,35 @@ export default function TeamPage() {
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <p className="tech-meta">ORIGEM DO NOME</p>
           <h2 className="font-display mt-3 max-w-3xl text-3xl font-extrabold text-[var(--wp-white)] lg:text-4xl">
-            Wakanda não é destino. É decisão de construir o próprio futuro.
+            Wakanda nÃ£o Ã© destino. Ã‰ decisÃ£o de construir o prÃ³prio futuro.
           </h2>
           <div className="mt-10 grid gap-10 lg:grid-cols-2">
             <div className="space-y-4 text-[var(--wp-silver-mute)]">
               <p>
-                Escolhemos o nome pela força do afrofuturismo: a ideia de que o
-                amanhã também pertence a quem hoje é subestimado. Wakanda
-                representa autonomia, conhecimento coletivo e inovação nascida
-                da própria comunidade — os mesmos recursos que uma boa equipe de
+                Escolhemos o nome pela forÃ§a do afrofuturismo: a ideia de que o
+                amanhÃ£ tambÃ©m pertence a quem hoje Ã© subestimado. Wakanda
+                representa autonomia, conhecimento coletivo e inovaÃ§Ã£o nascida
+                da prÃ³pria comunidade â€” os mesmos recursos que uma boa equipe de
                 engenharia precisa ter.
               </p>
               <p>
-                O <dfn>Pro</dfn> é a nossa parte no trato: profissionalismo
-                nascente, o tempo que se aprende fazendo. Cada temporada é um
-                degrau entre o que sonhamos e o que já sabemos construir.
+                O <dfn>Pro</dfn> Ã© a nossa parte no trato: profissionalismo
+                nascente, o tempo que se aprende fazendo. Cada temporada Ã© um
+                degrau entre o que sonhamos e o que jÃ¡ sabemos construir.
               </p>
             </div>
             <div className="space-y-4 text-[var(--wp-silver-mute)]">
               <p>
-                Somos estreantes na FIRST Tech Challenge — e assumimos isso com
-                orgulho. Ser estreante significa aprender rápido, errar em voz
-                alta e anotar tudo. É assim que a gente transforma coragem em
-                método.
+                Somos estreantes na FIRST Tech Challenge â€” e assumimos isso com
+                orgulho. Ser estreante significa aprender rÃ¡pido, errar em voz
+                alta e anotar tudo. Ã‰ assim que a gente transforma coragem em
+                mÃ©todo.
               </p>
             </div>
           </div>
           <p className="mt-10 max-w-3xl border-l-2 border-[var(--wp-cyan)] bg-[var(--wp-coal)] p-4 text-sm text-[var(--wp-silver-dim)]">
-            Wakanda é um reino de ficção. O nome é inspiração estética e
-            simbólica; a equipe não possui qualquer vínculo com a Marvel ou com
+            Wakanda Ã© um reino de ficÃ§Ã£o. O nome Ã© inspiraÃ§Ã£o estÃ©tica e
+            simbÃ³lica; a equipe nÃ£o possui qualquer vÃ­nculo com a Marvel ou com
             qualquer marca.
           </p>
         </div>
@@ -172,21 +173,21 @@ export default function TeamPage() {
 
       <section className="border-t border-[var(--wp-edge)] py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
-          <p className="tech-meta">MISSÃO · VISÃO · VALORES</p>
+          <p className="tech-meta">MISSÃƒO Â· VISÃƒO Â· VALORES</p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             <article className="rounded-xl border border-[var(--wp-edge)] bg-[var(--wp-coal)] p-6">
-              <p className="tech-meta text-[var(--wp-red)]">MISSÃO</p>
+              <p className="tech-meta text-[var(--wp-red)]">MISSÃƒO</p>
               <p className="mt-4 text-[var(--wp-silver)]">
                 Aprender engenharia de verdade: projetar, construir, testar,
-                programar e documentar com responsabilidade técnica e trabalho
+                programar e documentar com responsabilidade tÃ©cnica e trabalho
                 em equipe.
               </p>
             </article>
             <article className="rounded-xl border border-[var(--wp-edge)] bg-[var(--wp-coal)] p-6">
-              <p className="tech-meta text-[var(--wp-gold-soft)]">VISÃO</p>
+              <p className="tech-meta text-[var(--wp-gold-soft)]">VISÃƒO</p>
               <p className="mt-4 text-[var(--wp-silver)]">
-                Mostrar que uma primeira temporada bem construída pode inspirar
-                outras equipes em Camaçari e no Brasil inteiro.
+                Mostrar que uma primeira temporada bem construÃ­da pode inspirar
+                outras equipes em CamaÃ§ari e no Brasil inteiro.
               </p>
             </article>
             <article className="rounded-xl border border-[var(--wp-edge)] bg-[var(--wp-coal)] p-6">
@@ -195,7 +196,7 @@ export default function TeamPage() {
                 {valores.map((v) => (
                   <li key={v} className="flex gap-2">
                     <span aria-hidden className="text-[var(--wp-red)]">
-                      ▸
+                      â–¸
                     </span>
                     {v}
                   </li>
@@ -212,10 +213,10 @@ export default function TeamPage() {
             {siteConfig.numeroFtc}
           </span>
           <div>
-            <p className="tech-meta">NÚMERO DE EQUIPE · FIRST TECH CHALLENGE</p>
+            <p className="tech-meta">NÃšMERO DE EQUIPE Â· FIRST TECH CHALLENGE</p>
             <p className="mt-2 max-w-xl text-sm text-[var(--wp-silver-mute)]">
-              O número é a nossa assinatura em campo: identifica a Wakanda Pro
-              em toda a temporada e em todo o circuito da competição.
+              O nÃºmero Ã© a nossa assinatura em campo: identifica a Wakanda Pro
+              em toda a temporada e em todo o circuito da competiÃ§Ã£o.
             </p>
           </div>
         </div>
@@ -225,19 +226,19 @@ export default function TeamPage() {
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <p className="tech-meta">FILOSOFIA</p>
           <h2 className="font-display mt-3 text-3xl font-extrabold text-[var(--wp-white)] lg:text-4xl">
-            Conhecimento é a nossa armadura
+            Conhecimento Ã© a nossa armadura
           </h2>
           <div className="mt-10 grid gap-10 lg:grid-cols-2">
             <div className="space-y-4 text-[var(--wp-silver-mute)]">
               <p>
-                Primeira temporada é humildade com prazo. Ninguém aqui finge que
+                Primeira temporada Ã© humildade com prazo. NinguÃ©m aqui finge que
                 domina tudo: a gente estuda, pergunta, desfaz e refaz. Erro
-                anotado é engenharia; erro escondido é acidente esperando hora.
+                anotado Ã© engenharia; erro escondido Ã© acidente esperando hora.
               </p>
               <p>
-                A filosofia da Wakanda Pro é simples: compartilhar o que se
+                A filosofia da Wakanda Pro Ã© simples: compartilhar o que se
                 aprende. Ferramenta, ideia e conhecimento valem mais quando
-                circulam — dentro da equipe, na escola e fora dela.
+                circulam â€” dentro da equipe, na escola e fora dela.
               </p>
             </div>
             <div>
@@ -261,15 +262,15 @@ export default function TeamPage() {
                 Quer conhecer quem faz acontecer?
               </h3>
               <p className="mt-2 max-w-xl text-sm text-[var(--wp-silver-mute)]">
-                Na página de integrantes está a gente concreta: quem projeta,
-                quem programa, quem compacta tudo em dia de decisão apertada.
+                Na pÃ¡gina de integrantes estÃ¡ a gente concreta: quem projeta,
+                quem programa, quem compacta tudo em dia de decisÃ£o apertada.
               </p>
             </div>
             <Link
               href="/integrantes"
               className="inline-flex shrink-0 items-center gap-2 rounded-full border border-[var(--wp-red)] px-6 py-3 font-mono text-xs uppercase tracking-[0.18em] text-[var(--wp-white)] transition-colors hover:bg-[var(--wp-red)]"
             >
-              Conhecer os integrantes →
+              Conhecer os integrantes â†’
             </Link>
           </div>
         </div>
@@ -277,3 +278,4 @@ export default function TeamPage() {
     </>
   );
 }
+

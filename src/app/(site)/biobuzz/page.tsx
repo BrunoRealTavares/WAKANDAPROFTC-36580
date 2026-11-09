@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { assets } from "@/data/assets";
 import siteConfig from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -30,7 +31,7 @@ export default function BioBuzzPage() {
         <div className="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-[auto_1fr] lg:items-center lg:px-8">
           <figure className="mx-auto rounded-xl border border-[var(--wp-edge)] bg-[var(--wp-coal)] p-8">
             <Image
-              src="/img/FIRST-TECH-CHALLENGE.png.png"
+              src={assets.logoFtc}
               alt="Logo da FIRST Tech Challenge"
               width={356}
               height={280}
@@ -68,7 +69,7 @@ export default function BioBuzzPage() {
             <article className="rounded-xl border border-[var(--wp-edge)] bg-[var(--wp-void)] p-8 lg:p-10">
               <div className="mx-auto flex items-center justify-center mb-6 rounded-xl border border-[var(--wp-gold)]/30 bg-[var(--wp-coal)] p-8">
                 <Image
-                  src="/img/FIRST-TECH-CHALLENGE.png.png"
+                  src={assets.logoFtc}
                   alt="Logo da FIRST Tech Challenge"
                   width={356}
                   height={280}
@@ -88,7 +89,7 @@ export default function BioBuzzPage() {
             <article className="rounded-xl border border-[var(--wp-edge)] bg-[var(--wp-void)] p-8 lg:p-10">
               <div className="mx-auto flex items-center justify-center mb-6 rounded-xl border border-[var(--wp-gold)]/30 bg-[var(--wp-coal)] p-8">
                 <Image
-                  src="/img/logo-biobuzz.png.png"
+                  src={assets.logoBiobuzz}
                   alt="Logo do desafio BIOBUZZ 2026–27"
                   width={447}
                   height={447}
@@ -163,5 +164,6 @@ export default function BioBuzzPage() {
     </>
   );
 }
+
 
 
