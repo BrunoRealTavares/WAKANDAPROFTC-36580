@@ -1,12 +1,13 @@
 ﻿import type { Metadata } from "next";
-import { assets } from "@/data/assets";
 import Link from "next/link";
 import Image from "next/image";
+import { assets } from "@/data/assets";
+import { conteudo } from "@/data/conteudo";
 
 export const metadata: Metadata = {
   title: "Nossa Escola | Wakanda Pro 36580",
   description:
-    "Escola SESI Milton Santos, em CamaÃ§ari/BA: berÃ§o da equipe Wakanda Pro de robÃ³tica, centro de treinamento e ponto de encontro entre engenharia e patrimÃ´nio cultural.",
+    "Escola SESI Milton Santos, em Camaçari/BA: berço da equipe Wakanda Pro de robótica, centro de treinamento e ponto de encontro entre engenharia e patrimônio cultural.",
 };
 
 export default function SchoolPage() {
@@ -19,18 +20,18 @@ export default function SchoolPage() {
             Escola SESI Milton Santos
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--wp-silver-mute)]">
-            A Escola SESI Milton Santos, em CamaÃ§ari, Bahia, Ã© o berÃ§o do
-            projeto Wakanda Pro. Ã‰ lÃ¡ que a equipe se forma, treina e descobre
-            que a engenharia tambÃ©m Ã© heranÃ§a cultural â€” um espaÃ§o onde ciÃªncia,
-            tecnologia e a tradiÃ§Ã£o local se encontram para formar futuras
-            carreiras em robÃ³tica e inovaÃ§Ã£o.
+            A Escola SESI Milton Santos, em Camaçari, Bahia, é o berço do
+            projeto Wakanda Pro. É lá que a equipe se forma, treina e descobre
+            que a engenharia também é herança cultural — um espaço onde ciência,
+            tecnologia e a tradição local se encontram para formar futuras
+            carreiras em robótica e inovação.
           </p>
           <div className="mt-10">
             <Link
               href="/escola"
               className="inline-flex h-11 items-center rounded border border-[var(--wp-edge)] px-6 font-mono text-xs uppercase tracking-[0.18em] text-[var(--wp-silver-mute)] transition-colors hover:border-[var(--wp-gold)] hover:text-[var(--wp-gold-soft)]"
             >
-              ConheÃ§a a escola â†’
+              Conheça a escola →
             </Link>
           </div>
         </div>
@@ -38,7 +39,7 @@ export default function SchoolPage() {
 
       <section className="border-t border-[var(--wp-edge)] bg-[var(--wp-coal)] py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
-          <p className="tech-meta mb-12">NOSSAS RAÃZES</p>
+          <p className="tech-meta mb-12">NOSSAS RAÍZES</p>
           <div className="grid gap-6 sm:grid-cols-2 lg:gap-10">
             <figure className="rounded-xl border border-[var(--wp-edge)] p-6">
               <div className="overflow-hidden rounded-lg bg-[var(--wp-graphite)]">
@@ -54,8 +55,13 @@ export default function SchoolPage() {
                 <p className="font-display text-lg font-extrabold text-[var(--wp-white)]">
                   Bahia
                 </p>
-                <p className="tech-meta mt-1">BERÃ‡O DO PROJETO</p>
+                <p className="tech-meta mt-1">BERÇO DO PROJETO</p>
               </figcaption>
+              <div className="mt-4 space-y-2 text-sm text-[var(--wp-silver-mute)] leading-relaxed">
+                {conteudo.bahia.paragrafos.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
             </figure>
             <figure className="rounded-xl border border-[var(--wp-edge)] p-6">
               <div className="overflow-hidden rounded-lg bg-[var(--wp-graphite)]">
@@ -80,4 +86,3 @@ export default function SchoolPage() {
     </>
   );
 }
-
