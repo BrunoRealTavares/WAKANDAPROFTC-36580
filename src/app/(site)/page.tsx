@@ -163,10 +163,16 @@ export default function Home() {
             </p>
             <div className="mt-8">
               <Link
-                href="/escola"
-                className="inline-flex h-11 items-center rounded border border-[var(--wp-edge)] px-6 font-mono text-xs uppercase tracking-[0.18em] text-[var(--wp-silver-mute)] transition-colors hover:border-[var(--wp-gold)] hover:text-[var(--wp-gold-soft)]"
+                href="https://www.escolasesiba.com.br/nossas-escolas/cama%C3%A7ari/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-11 items-center gap-2 rounded border border-[var(--wp-edge)] px-6 font-mono text-xs uppercase tracking-[0.18em] text-[var(--wp-silver-mute)] transition-colors hover:border-[var(--wp-gold)] hover:text-[var(--wp-gold-soft)]"
+                aria-label="Conheça a Escola SESI Milton Santos em Camaçari (abre em nova aba)"
               >
                 Conheça a escola →
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </Link>
             </div>
           </div>
