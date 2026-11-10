@@ -26,7 +26,7 @@ export function SiteFooter() {
             <li><Link className="hover:text-[var(--wp-white)]" href="/robo">Projeto Vibranium</Link></li>
             <li><Link className="hover:text-[var(--wp-white)]" href="/biobuzz">Temporada BIOBUZZ</Link></li>
             <li><Link className="hover:text-[var(--wp-white)]" href="/galeria">Galeria</Link></li>
-            <li><Link className="hover:text-[var(--wp-white)]" href="/diario">Diário de bordo</Link></li>
+            <li><Link className="hover:text-[var(--wp-white)]" href="/contato">Contato</Link></li>
           </ul>
         </div>
 

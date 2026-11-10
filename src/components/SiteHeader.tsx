@@ -9,7 +9,6 @@ const navItems = [
   { href: "/robo", label: "Robô" },
   { href: "/biobuzz", label: "BIOBUZZ" },
   { href: "/simulador", label: "Simulador" },
-  { href: "/diario", label: "Diário" },
   { href: "/galeria", label: "Galeria" },
   { href: "/contato", label: "Contato" },
 ];

@@ -315,14 +315,6 @@ export default function Home() {
               Entre no campo com o simulador 3D e acompanhe o diário de bordo.
             </p>
           </div>
-          <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-            <Link
-              href="/diario"
-              className="inline-flex h-12 items-center justify-center rounded border border-[var(--wp-edge)] px-6 text-sm text-[var(--wp-silver-mute)] transition-colors hover:text-[var(--wp-white)]"
-            >
-              Diário de bordo
-            </Link>
-          </div>
         </Reveal>
         <div className="mx-auto max-w-7xl px-5 pb-24 lg:px-8 lg:pb-32">
           <SimulatorEmbed url={siteConfig.linksExternos.simuladorBioBuzz} />

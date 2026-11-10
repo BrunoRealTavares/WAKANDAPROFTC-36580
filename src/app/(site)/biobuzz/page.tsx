@@ -136,18 +136,6 @@ export default function BioBuzzPage() {
               sair do navegador.
             </p>
           </Link>
-          <Link
-            href="/diario"
-            className="group rounded-xl border border-[var(--wp-edge)] bg-[var(--wp-coal)] p-8 transition-colors hover:border-[var(--wp-red-deep)]"
-          >
-            <p className="tech-meta">ACOMPANHAR A JORNADA</p>
-            <h3 className="font-display mt-3 text-2xl font-extrabold text-[var(--wp-white)]">
-              Ler o diário de bordo →
-            </h3>
-            <p className="mt-3 text-sm text-[var(--wp-silver-mute)]">
-              O registro honesto da construção do Vibranium, um dia após outro.
-            </p>
-          </Link>
         </div>
       </section>
     </>
