@@ -158,9 +158,6 @@ export default function Home() {
               é lá que a equipe se forma, treina e descobre que engenharia
               também é herança cultural.
             </p>
-            <p className="tech-meta mt-6 inline-block rounded border border-dashed border-[var(--wp-edge)] px-3 py-2">
-              Nomenclatura institucional sujeita a confirmação
-            </p>
             <div className="mt-8">
               <Link
                 href="https://www.escolasesiba.com.br/nossas-escolas/cama%C3%A7ari/"
