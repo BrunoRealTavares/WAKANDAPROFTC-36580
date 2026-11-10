@@ -5,7 +5,6 @@ import { assets } from "@/data/assets";
 const navItems = [
   { href: "/equipe", label: "Equipe" },
   { href: "/historia", label: "História" },
-  { href: "/integrantes", label: "Integrantes" },
   { href: "/escola", label: "Escola" },
   { href: "/robo", label: "Robô" },
   { href: "/biobuzz", label: "BIOBUZZ" },

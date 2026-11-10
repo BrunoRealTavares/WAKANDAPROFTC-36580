@@ -1,6 +1,5 @@
 ﻿import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { MembroAvatarBadge } from "@/components/MembroAvatarBadge";
 import { assets } from "@/data/assets";
 import { equipe, type GrupoEquipe } from "@/data/equipe";
@@ -263,16 +262,10 @@ export default function TeamPage() {
                 Quer conhecer quem faz acontecer?
               </h3>
               <p className="mt-2 max-w-xl text-sm text-[var(--wp-silver-mute)]">
-                Na página de integrantes está a gente concreta: quem projeta,
+                Na página da equipe está a gente concreta: quem projeta,
                 quem programa, quem compacta tudo em dia de decisão apertada.
               </p>
             </div>
-            <Link
-              href="/integrantes"
-              className="inline-flex shrink-0 items-center gap-2 rounded-full border border-[var(--wp-red)] px-6 py-3 font-mono text-xs uppercase tracking-[0.18em] text-[var(--wp-white)] transition-colors hover:bg-[var(--wp-red)]"
-            >
-              Conhecer os integrantes →
-            </Link>
           </div>
         </div>
       </section>
