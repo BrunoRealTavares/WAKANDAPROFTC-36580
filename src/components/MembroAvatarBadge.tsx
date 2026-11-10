@@ -1,13 +1,9 @@
 ﻿import Image from "next/image";
-import { assets } from "@/data/assets";
 
 /**
  * MembroAvatarBadge — avatar circular do membro da equipe.
  * - Se `foto` for informada, exibe a foto preenchendo o círculo.
  * - Caso contrário, exibe silhouette neutra com iniciais.
- * Sobre o avatar, dois emblemas dentro do círculo:
- * - Liga Robótica SESI Bahia (bottom-left)
- * - Escudo Wakanda Pro (bottom-right)
  */
 export function MembroAvatarBadge({
   nome,
@@ -29,9 +25,9 @@ export function MembroAvatarBadge({
 
   // Dimensões do avatar conforme o tamanho
   const dims = {
-    sm: { wrapper: "h-12 w-12", img: "w-12 h-12", badge: "h-6 w-6", badgeImg: "h-5 w-5", offset: "-bottom-2 -left-2 -right-2", texto: "text-xs" },
-    md: { wrapper: "h-24 w-24", img: "w-24 h-24", badge: "h-8 w-8", badgeImg: "h-7 w-7", offset: "-bottom-3 -left-3 -right-3", texto: "text-sm" },
-    lg: { wrapper: "h-32 w-32", img: "w-32 h-32", badge: "h-10 w-10", badgeImg: "h-9 w-9", offset: "-bottom-4 -left-4 -right-4", texto: "text-base" },
+    sm: { wrapper: "h-12 w-12", img: "w-12 h-12", texto: "text-xs" },
+    md: { wrapper: "h-24 w-24", img: "w-24 h-24", texto: "text-sm" },
+    lg: { wrapper: "h-32 w-32", img: "w-32 h-32", texto: "text-base" },
   }[tamanho];
 
   const temFoto = Boolean(foto);
@@ -68,28 +64,6 @@ export function MembroAvatarBadge({
           </div>
         </div>
       )}
-
-      {/* Badge Liga Robótica — bottom-left dentro do círculo */}
-      <div className={`absolute ${dims.offset.split(' ')[0]} ${dims.offset.split(' ')[1]} ${dims.offset.split(' ')[2]} ${dims.offset.split(' ')[3]} z-20 rounded-full border-2 border-[var(--wp-gold-soft)] bg-[var(--wp-void)] flex items-center justify-center shadow-[0_0_12px_rgba(224,176,80,0.4)]`}>
-        <Image
-          src={assets.logoLigaRobotica}
-          alt="Liga Robótica SESI Bahia"
-          width={48}
-          height={48}
-          className={`${dims.badgeImg} object-contain`}
-        />
-      </div>
-
-      {/* Badge Wakanda Pro — bottom-right dentro do círculo */}
-      <div className={`absolute ${dims.offset.split(' ')[0]} ${dims.offset.split(' ')[2]} z-20 rounded-full border-2 border-[var(--wp-gold-soft)] bg-[var(--wp-void)] flex items-center justify-center shadow-[0_0_12px_rgba(224,176,80,0.4)]`}>
-        <Image
-          src={assets.escudo}
-          alt="Escudo Wakanda Pro"
-          width={48}
-          height={48}
-          className={`${dims.badgeImg} object-contain`}
-        />
-      </div>
     </div>
   );
 }
