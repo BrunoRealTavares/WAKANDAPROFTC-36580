@@ -21,7 +21,7 @@ export function ModernNavbar() {
           <ElectricLogo src={assets.escudo} alt="Escudo Wakanda Pro" tamanho="sm" />
           <div className="flex flex-col">
             <span className="font-display text-sm font-extrabold text-[var(--wp-white)] tracking-tight">
-              WAKANDA PRO
+              WAKANDA <span className="wp-pro">PRO</span>
             </span>
             <span className="text-[10px] text-[var(--wp-silver-dim)] uppercase tracking-[0.15em]">
               FTC 36580 · BIOBUZZ

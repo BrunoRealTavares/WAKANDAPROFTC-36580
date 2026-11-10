@@ -20,7 +20,7 @@ export function SiteHeader() {
         <Link href="/" className="group flex items-center gap-2">
           <ElectricLogo src={assets.escudo} alt="Escudo Wakanda Pro" tamanho="sm" />
           <span className="font-display text-lg font-extrabold tracking-tight text-[var(--wp-white)]">
-            WAKANDA<span className="text-[var(--wp-red)]">•</span>PRO
+            WAKANDA<span className="text-[var(--wp-red)]">•</span><span className="wp-pro">PRO</span>
           </span>
           <span className="tech-meta group-hover:text-[var(--wp-gold-soft)] transition-colors">
             36580

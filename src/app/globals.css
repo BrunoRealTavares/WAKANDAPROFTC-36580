@@ -140,24 +140,35 @@ body {
   50% { filter: drop-shadow(0 0 24px rgba(224, 176, 80, 0.7)); }
 }
 
-/* TechText — destaque tecnológico em títulos */
+/* Cor da equipe — vinho do escudo (#8b1c2b), reutilizando token existente */
+--cor-equipe: var(--wp-red);
+
+/* TechText — destaque tecnológico em títulos (agora em vinho da equipe) */
 .wp-tech-text {
-  color: var(--wp-gold-soft);
+  color: #b3243a;
   text-shadow:
-    0 0 14px rgba(224, 176, 80, 0.35),
-    0 0 36px rgba(139, 28, 43, 0.3);
+    0 0 14px rgba(179, 36, 58, 0.45),
+    0 0 36px rgba(139, 28, 43, 0.35);
   animation: wp-tech-glow 5s ease-in-out infinite;
 }
 
 @keyframes wp-tech-glow {
   0%, 100% {
     text-shadow:
-      0 0 14px rgba(224, 176, 80, 0.3),
-      0 0 36px rgba(139, 28, 43, 0.25);
+      0 0 14px rgba(179, 36, 58, 0.4),
+      0 0 36px rgba(139, 28, 43, 0.3);
   }
   50% {
     text-shadow:
-      0 0 20px rgba(224, 176, 80, 0.55),
-      0 0 48px rgba(139, 28, 43, 0.4);
+      0 0 20px rgba(179, 36, 58, 0.6),
+      0 0 48px rgba(139, 28, 43, 0.45);
   }
+}
+
+/* Texto "Pro" da equipe em vinho com brilho — usado em cabeçalho e rodapé */
+.wp-pro {
+  color: #b3243a;
+  text-shadow:
+    0 0 10px rgba(179, 36, 58, 0.5),
+    0 0 20px rgba(139, 28, 43, 0.4);
 }

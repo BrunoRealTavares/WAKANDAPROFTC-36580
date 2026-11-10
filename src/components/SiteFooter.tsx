@@ -10,7 +10,7 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 lg:grid-cols-3 lg:px-8">
         <div>
           <p className="font-display text-xl font-extrabold text-[var(--wp-white)]">
-            WAKANDA<span className="text-[var(--wp-red)]">·</span>PRO
+            WAKANDA<span className="text-[var(--wp-red)]">·</span><span className="wp-pro">PRO</span>
           </p>
           <p className="tech-meta mt-1">CAMAÇARI · BAHIA · BRASIL</p>
           <p className="mt-4 max-w-xs text-sm text-[var(--wp-silver-mute)]">
