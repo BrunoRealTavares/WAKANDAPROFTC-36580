@@ -17,19 +17,19 @@ export type MembroEquipe = {
  */
 export const equipe: MembroEquipe[] = [
   // Liderança em destaque
-  { nome: "Juliana de Jesus", papel: "tecnica", foto: "/img/imagem-fundo-integrantes.png.png" },
-  { nome: "Catarina Lima", papel: "mentora", foto: "/img/imagem-fundo-integrantes.png.png" },
+  { nome: "Juliana de Jesus", papel: "tecnica", foto: "/images/imagem-fundo-integrantes.png" },
+  { nome: "Catarina Lima", papel: "mentora", foto: "/images/imagem-fundo-integrantes.png" },
 
   // Grupo MCI
-  { nome: "Bruno Real", papel: "membro", grupo: "MCI", foto: "/img/imagem-fundo-integrantes.png.png" },
-  { nome: "Pedro Freire", papel: "membro", grupo: "MCI", foto: "/img/imagem-fundo-integrantes.png.png" },
-  { nome: "Maria Eduarda", papel: "membro", grupo: "MCI", foto: "/img/imagem-fundo-integrantes.png.png" },
-  { nome: "Marcelo Henrique", papel: "membro", grupo: "MCI", foto: "/img/imagem-fundo-integrantes.png.png" },
-  { nome: "Murilo Paz", papel: "membro", grupo: "MCI", foto: "/img/imagem-fundo-integrantes.png.png" },
-  { nome: "Pedro Lucas", papel: "membro", grupo: "MCI", foto: "/img/imagem-fundo-integrantes.png.png" },
+  { nome: "Bruno Real", papel: "membro", grupo: "MCI", foto: "/images/imagem-fundo-integrantes.png" },
+  { nome: "Pedro Freire", papel: "membro", grupo: "MCI", foto: "/images/imagem-fundo-integrantes.png" },
+  { nome: "Maria Eduarda", papel: "membro", grupo: "MCI", foto: "/images/imagem-fundo-integrantes.png" },
+  { nome: "Marcelo Henrique", papel: "membro", grupo: "MCI", foto: "/images/imagem-fundo-integrantes.png" },
+  { nome: "Murilo Paz", papel: "membro", grupo: "MCI", foto: "/images/imagem-fundo-integrantes.png" },
+  { nome: "Pedro Lucas", papel: "membro", grupo: "MCI", foto: "/images/imagem-fundo-integrantes.png" },
 
   // Grupo AE
-  { nome: "Hannah Maia", papel: "membro", grupo: "AE", foto: "/img/imagem-fundo-integrantes.png.png" },
-  { nome: "Nathália Jesus", papel: "membro", grupo: "AE", foto: "/img/imagem-fundo-integrantes.png.png" },
-  { nome: "Sofia Souza", papel: "membro", grupo: "AE", foto: "/img/imagem-fundo-integrantes.png.png" },
+  { nome: "Hannah Maia", papel: "membro", grupo: "AE", foto: "/images/imagem-fundo-integrantes.png" },
+  { nome: "Nathália Jesus", papel: "membro", grupo: "AE", foto: "/images/imagem-fundo-integrantes.png" },
+  { nome: "Sofia Souza", papel: "membro", grupo: "AE", foto: "/images/imagem-fundo-integrantes.png" },
 ];

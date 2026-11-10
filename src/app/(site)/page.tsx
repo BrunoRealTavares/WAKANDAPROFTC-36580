@@ -31,9 +31,9 @@ const porQueWakanda = [
 ];
 
 const selos = [
-  { src: "/img/logo-first-tech-challenge.png", alt: "Logotipo do FIRST Tech Challenge", largura: 356, altura: 280 },
-  { src: "/img/logo-biobuzz.jpg", alt: "Logotipo da temporada BIOBUZZ", largura: 447, altura: 447 },
-  { src: "/img/logo-liga-robotica-sesi-bahia.jpg", alt: "Logotipo da Liga de Robótica SESI Bahia", largura: 500, altura: 500 },
+  { src: assets.logoFtc, alt: "Logotipo do FIRST Tech Challenge", largura: 356, altura: 280 },
+  { src: assets.logoBiobuzz, alt: "Logotipo da temporada BIOBUZZ", largura: 447, altura: 447 },
+  { src: assets.logoLigaRobotica, alt: "Logotipo da Liga de Robótica SESI Bahia", largura: 500, altura: 500 },
 ];
 
 export default function Home() {
