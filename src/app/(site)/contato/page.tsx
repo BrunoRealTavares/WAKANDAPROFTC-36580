@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { contato } from "@/data/contato";
+import { TechText } from "@/components/TechText";
 import { ContactForm } from "./ContactForm";
 
 export const metadata: Metadata = {
@@ -15,7 +16,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <p className="tech-meta">CANAL / EQUIPE 36580</p>
           <h1 className="font-display mt-4 text-4xl font-extrabold text-[var(--wp-white)] sm:text-5xl lg:text-6xl">
-            Fale com a Wakanda Pro
+            <TechText texto="Fale com a Wakanda Pro" destaque="Wakanda Pro" />
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-[var(--wp-silver-mute)]">
             Imprensa, patrocínio, dúvidas ou só energia boa: tudo passa por

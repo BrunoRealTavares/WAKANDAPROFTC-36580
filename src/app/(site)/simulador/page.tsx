@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import siteConfig from "@/lib/site-config";
+import { TechText } from "@/components/TechText";
 import { SimulatorEmbed } from "./SimulatorEmbed";
 
 export const metadata: Metadata = {
@@ -15,7 +16,7 @@ export default function SimulatorPage() {
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <p className="tech-meta">FERRAMENTA EXTERNA / ESTUDO DE CAMPO</p>
           <h1 className="font-display mt-4 text-4xl font-extrabold text-[var(--wp-white)] sm:text-5xl lg:text-6xl">
-            Entre no campo BIOBUZZ
+            <TechText texto="Entre no campo BIOBUZZ" destaque="BIOBUZZ" />
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-[var(--wp-silver-mute)]">
             Antes de apertar o primeiro parafuso, a gente estuda o jogo. Este

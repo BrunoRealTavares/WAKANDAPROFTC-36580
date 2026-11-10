@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { assets } from "@/data/assets";
+import { ElectricLogo } from "@/components/ElectricLogo";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -19,13 +19,7 @@ export function ModernNavbar() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 lg:px-8">
         {/* Top-left header: escudo + WAKANDA PRO + lâmpada */}
         <Link href="/" className="flex items-center gap-3 group">
-          <Image
-            src={assets.escudo}
-            alt="Escudo Wakanda Pro"
-            width={32}
-            height={32}
-            className="h-8 w-8 drop-shadow-[0_0_12px_rgba(139,28,43,0.6)]"
-          />
+          <ElectricLogo src={assets.escudo} alt="Escudo Wakanda Pro" tamanho="sm" />
           <div className="flex flex-col">
             <span className="font-display text-sm font-extrabold text-[var(--wp-white)] tracking-tight">
               WAKANDA PRO

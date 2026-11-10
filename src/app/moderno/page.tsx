@@ -1,4 +1,5 @@
 ﻿import { ModernNavbar } from "@/components/ModernNavbar";
+import { TechText } from "@/components/TechText";
 import { assets } from "@/data/assets";
 import { HolographicUserIcon } from "@/components/HolographicUserIcon";
 import { CodePartnerCard } from "@/components/CodePartnerCard";
@@ -39,7 +40,7 @@ export default function ModernoPage() {
                 Sistema de Perfil · Ativo
               </p>
               <h1 className="font-display text-[clamp(2rem,6vw,4rem)] font-extrabold text-[var(--wp-white)] leading-[0.95]">
-                Wakanda Pro
+                <TechText texto="Wakanda Pro" destaque="Pro" />
               </h1>
               <p className="max-w-xl text-lg leading-relaxed text-[var(--wp-silver-mute)]">
                 Interface moderna · modo escuro · identidade de alta tecnologia ·<br />
@@ -54,7 +55,7 @@ export default function ModernoPage() {
           <div className="mx-auto max-w-7xl">
             <div className="flex items-center justify-between mb-16">
               <h2 className="font-mono text-2xl font-bold text-[var(--wp-white)] tracking-tight">
-                Team Member Profiles and Partners
+                <TechText texto="Team Member Profiles and Partners" destaque="Partners" />
               </h2>
               <p className="text-sm text-[var(--wp-silver-dim)] italic">
                 Código aberto · Parcerias da temporada

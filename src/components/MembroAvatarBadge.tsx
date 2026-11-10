@@ -45,8 +45,8 @@ export function MembroAvatarBadge({
           alt={`Foto de ${nome}`}
           width={96}
           height={96}
-          className={`${dims.img} rounded-full object-cover border border-[var(--wp-edge)]`}
-          priority
+          className={`${dims.img} rounded-full object-cover border border-[var(--wp-edge)] hover:border-[var(--wp-gold)]`}
+          preload
         />
       ) : (
         <div className={`${dims.img} rounded-full bg-[var(--wp-graphite)] flex items-center justify-center overflow-hidden relative`}>
@@ -93,3 +93,4 @@ export function MembroAvatarBadge({
     </div>
   );
 }
+

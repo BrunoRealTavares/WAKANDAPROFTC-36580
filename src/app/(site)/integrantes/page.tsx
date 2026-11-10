@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { equipe, type GrupoEquipe, type MembroEquipe } from "@/data/equipe";
 import { MembroAvatarBadge } from "@/components/MembroAvatarBadge";
+import { TechText } from "@/components/TechText";
 
 export const metadata: Metadata = {
   title: "Integrantes | Wakanda Pro 36580",
@@ -27,7 +28,7 @@ export default function MembersPage() {
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <p className="tech-meta">PESSOAS / EQUIPE 36580</p>
           <h1 className="font-display mt-4 text-4xl font-extrabold text-[var(--wp-white)] sm:text-5xl lg:text-6xl">
-            Os integrantes
+            <TechText texto="Os integrantes" destaque="integrantes" />
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-[var(--wp-silver-mute)]">
             Por trás de cada parafuso apertado e de cada linha de código, tem

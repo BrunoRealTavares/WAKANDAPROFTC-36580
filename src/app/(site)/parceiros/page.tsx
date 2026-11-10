@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { getPublishedPartners } from "@/lib/public-content";
+import { TechText } from "@/components/TechText";
 import { ContactForm } from "../contato/ContactForm";
 
 export const metadata: Metadata = {
@@ -60,7 +61,7 @@ export default function PartnersPage() {
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <p className="tech-meta">APOIO / EQUIPE 36580</p>
           <h1 className="font-display mt-4 text-4xl font-extrabold text-[var(--wp-white)] sm:text-5xl lg:text-6xl">
-            Parceiros e apoiadores
+            <TechText texto="Parceiros e apoiadores" destaque="Parceiros" />
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-[var(--wp-silver-mute)]">
             Nenhuma engenharia de estreia acontece sozinha. Quem apoia a

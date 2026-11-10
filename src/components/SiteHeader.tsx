@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { ElectricLogo } from "@/components/ElectricLogo";
+import { assets } from "@/data/assets";
 
 const navItems = [
   { href: "/equipe", label: "Equipe" },
@@ -17,7 +19,8 @@ export function SiteHeader() {
   return (
     <header className="fixed top-0 z-50 w-full border-b border-[var(--wp-graphite)] bg-[color-mix(in_srgb,var(--wp-void)_78%,transparent)] backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 lg:px-8">
-        <Link href="/" className="group flex items-baseline gap-2">
+        <Link href="/" className="group flex items-center gap-2">
+          <ElectricLogo src={assets.escudo} alt="Escudo Wakanda Pro" tamanho="sm" />
           <span className="font-display text-lg font-extrabold tracking-tight text-[var(--wp-white)]">
             WAKANDA<span className="text-[var(--wp-red)]">•</span>PRO
           </span>

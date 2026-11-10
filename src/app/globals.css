@@ -134,3 +134,30 @@ body {
   0%, 100% { box-shadow: 0 0 20px rgba(139, 28, 43, 0.4), 0 0 40px rgba(224, 176, 80, 0.3); }
   50% { box-shadow: 0 0 30px rgba(224, 176, 80, 0.6), 0 0 60px rgba(139, 28, 43, 0.5); }
 }
+
+@keyframes electric-pulse {
+  0%, 100% { filter: drop-shadow(0 0 12px rgba(139, 28, 43, 0.6)); }
+  50% { filter: drop-shadow(0 0 24px rgba(224, 176, 80, 0.7)); }
+}
+
+/* TechText — destaque tecnológico em títulos */
+.wp-tech-text {
+  color: var(--wp-gold-soft);
+  text-shadow:
+    0 0 14px rgba(224, 176, 80, 0.35),
+    0 0 36px rgba(139, 28, 43, 0.3);
+  animation: wp-tech-glow 5s ease-in-out infinite;
+}
+
+@keyframes wp-tech-glow {
+  0%, 100% {
+    text-shadow:
+      0 0 14px rgba(224, 176, 80, 0.3),
+      0 0 36px rgba(139, 28, 43, 0.25);
+  }
+  50% {
+    text-shadow:
+      0 0 20px rgba(224, 176, 80, 0.55),
+      0 0 48px rgba(139, 28, 43, 0.4);
+  }
+}

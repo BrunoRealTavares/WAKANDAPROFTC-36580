@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { assets } from "@/data/assets";
 import { conteudo } from "@/data/conteudo";
+import { TechText } from "@/components/TechText";
 
 export const metadata: Metadata = {
   title: "Nossa Escola | Wakanda Pro 36580",
@@ -17,7 +18,10 @@ export default function SchoolPage() {
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <p className="tech-meta">NOSSA ESCOLA</p>
           <h1 className="font-display mt-4 text-4xl font-extrabold text-[var(--wp-white)] sm:text-5xl lg:text-6xl">
-            Escola SESI Milton Santos
+            <TechText
+              texto="Escola SESI Milton Santos"
+              destaque="SESI Milton Santos"
+            />
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--wp-silver-mute)]">
             A Escola SESI Milton Santos, em Camaçari, Bahia, é o berço do

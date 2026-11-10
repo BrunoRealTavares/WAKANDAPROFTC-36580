@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import siteConfig from "@/lib/site-config";
 import { EscudoRevelacao } from "@/components/EscudoRevelacao";
+import { BellToggle } from "@/components/BellToggle";
 
 export const metadata: Metadata = {
   title: "O Robô | Wakanda Pro 36580",
@@ -53,6 +54,9 @@ export default function RobotPage() {
             <EscudoRevelacao size="lg" />
             <p className="tech-meta mt-8">VISUAL DO ROBÔ NÃO REVELADO</p>
             <p className="mt-2 text-sm text-[var(--wp-silver-mute)]">Em breve, a revelação</p>
+            <div className="mt-6">
+              <BellToggle />
+            </div>
           </div>
 
           <ul className="mt-10 flex flex-wrap justify-center gap-x-10 gap-y-3">

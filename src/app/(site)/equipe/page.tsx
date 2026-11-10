@@ -5,6 +5,7 @@ import { MembroAvatarBadge } from "@/components/MembroAvatarBadge";
 import { assets } from "@/data/assets";
 import { equipe, type GrupoEquipe } from "@/data/equipe";
 import siteConfig from "@/lib/site-config";
+import { TechText } from "@/components/TechText";
 
 export const metadata: Metadata = {
   title: "A Equipe | Wakanda Pro 36580",
@@ -48,7 +49,7 @@ export default function TeamPage() {
               {`A EQUIPE / FTC ${siteConfig.numeroFtc} / ${siteConfig.cidade.toUpperCase()} Â· ${siteConfig.estado.toUpperCase()}`}
             </p>
             <h1 className="font-display mt-4 text-4xl font-extrabold text-[var(--wp-white)] sm:text-5xl lg:text-6xl">
-              {siteConfig.nomeEquipe}
+              <TechText texto={siteConfig.nomeEquipe} destaque="Pro" />
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-[var(--wp-silver-mute)]">
               Somos uma equipe de robÃ³tica feita por estudantes: mÃ£os na moldura,
