@@ -9,7 +9,7 @@ export const assets = {
   escudo: "/images/escudo-wakanda-pro.png",
 
   // Logos de parceiros / ecossistema
-  logoFtc: "/images/logo-ftc.png",
+  logoFtc: "/images/logo-first.jpg",
   logoBiobuzz: "/images/logo-biobuzz.png",
   logoLigaRobotica: "/images/logo-liga-robotica.png",
 

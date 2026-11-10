@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { assets } from "@/data/assets";
+import { FirstLogo } from "@/components/FirstLogo";
 import siteConfig from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -30,13 +31,7 @@ export default function BioBuzzPage() {
       <section className="border-t border-[var(--wp-edge)] py-20 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-[auto_1fr] lg:items-center lg:px-8">
           <figure className="mx-auto rounded-xl border border-[var(--wp-edge)] bg-[var(--wp-coal)] p-8">
-            <Image
-              src={assets.logoFtc}
-              alt="Logo da FIRST Tech Challenge"
-              width={356}
-              height={280}
-              className="h-auto w-48 lg:w-64"
-            />
+            <FirstLogo width={356} height={280} className="w-48 lg:w-64" />
           </figure>
           <div>
             <p className="tech-meta">A COMPETIÇÃO</p>
@@ -68,13 +63,7 @@ export default function BioBuzzPage() {
           <div className="grid gap-10 lg:grid-cols-2">
             <article className="rounded-xl border border-[var(--wp-edge)] bg-[var(--wp-void)] p-8 lg:p-10">
               <div className="mx-auto flex items-center justify-center mb-6 rounded-xl border border-[var(--wp-gold)]/30 bg-[var(--wp-coal)] p-8">
-                <Image
-                  src={assets.logoFtc}
-                  alt="Logo da FIRST Tech Challenge"
-                  width={356}
-                  height={280}
-                  className="h-auto w-48 lg:w-64 object-contain"
-                />
+                <FirstLogo width={356} height={280} className="w-48 lg:w-64 object-contain" />
               </div>
               <h3 className="font-display mt-6 text-2xl font-extrabold text-[var(--wp-white)]">
                 A estreia da Wakanda Pro

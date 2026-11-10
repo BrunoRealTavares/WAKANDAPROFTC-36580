@@ -2,6 +2,7 @@
 import { TechText } from "@/components/TechText";
 import { assets } from "@/data/assets";
 import { HolographicUserIcon } from "@/components/HolographicUserIcon";
+import { FirstLogo } from "@/components/FirstLogo";
 import { CodePartnerCard } from "@/components/CodePartnerCard";
 
 export default function ModernoPage() {
@@ -65,10 +66,8 @@ export default function ModernoPage() {
             <div className="grid gap-8 sm:grid-cols-3">
               <CodePartnerCard
                 title="FIRST Tech Challenge"
-                logoSrc={assets.logoFtc}
+                logo={<FirstLogo width={356} height={280} />}
                 logoAlt="Logotipo oficial do FIRST Tech Challenge"
-                logoWidth={356}
-                logoHeight={280}
                 body="Equipe 36580 em estreia na competição FTC — temporada BIOBUZZ. Projeto Vibranium em construção, caderno de engenharia ativo."
               />
               <CodePartnerCard

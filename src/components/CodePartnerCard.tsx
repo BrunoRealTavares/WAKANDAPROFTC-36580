@@ -1,11 +1,13 @@
 import Image from "next/image";
+import type { ReactNode } from "react";
 
 type CodePartnerCardProps = {
   title: string;
-  logoSrc: string;
-  logoAlt: string;
-  logoWidth: number;
-  logoHeight: number;
+  logoSrc?: string;
+  logoAlt?: string;
+  logoWidth?: number;
+  logoHeight?: number;
+  logo?: ReactNode;
   body?: string;
   href?: string;
 };
@@ -20,6 +22,7 @@ export function CodePartnerCard({
   logoAlt,
   logoWidth,
   logoHeight,
+  logo,
   body,
   href,
 }: CodePartnerCardProps) {
@@ -47,13 +50,15 @@ export function CodePartnerCard({
 
         {/* Logo centralizado */}
         <div className="flex items-center justify-center mb-6">
-          <Image
-            src={logoSrc}
-            alt={logoAlt}
-            width={logoWidth}
-            height={logoHeight}
-            className="h-20 w-auto object-contain drop-shadow-[0_0_14px_rgba(0,0,0,0.6)]"
-          />
+          {logo || (
+            <Image
+              src={logoSrc!}
+              alt={logoAlt ?? ""}
+              width={logoWidth ?? 200}
+              height={logoHeight ?? 200}
+              className="h-20 w-auto object-contain drop-shadow-[0_0_14px_rgba(0,0,0,0.6)]"
+            />
+          )}
         </div>
 
         {/* Corpo com símbolo de fechamento */}

@@ -6,6 +6,7 @@ import { HeroMystery } from "@/components/anim/HeroMystery";
 import { Reveal } from "@/components/anim/Reveal";
 import { RevealSequence } from "@/components/anim/RevealSequence";
 import { MembroAvatar } from "@/components/MembroAvatar";
+import { FirstLogo } from "@/components/FirstLogo";
 import { SimulatorEmbed } from "@/app/(site)/simulador/SimulatorEmbed";
 import siteConfig from "@/lib/site-config";
 import { getTimelineEvents } from "@/lib/public-content";
@@ -31,7 +32,6 @@ const porQueWakanda = [
 ];
 
 const selos = [
-  { src: assets.logoFtc, alt: "Logotipo do FIRST Tech Challenge", largura: 356, altura: 280 },
   { src: assets.logoBiobuzz, alt: "Logotipo da temporada BIOBUZZ", largura: 447, altura: 447 },
   { src: assets.logoLigaRobotica, alt: "Logotipo da Liga de Robótica SESI Bahia", largura: 500, altura: 500 },
 ];
@@ -56,6 +56,7 @@ export default function Home() {
       {/* Selos do ecossistema da temporada */}
       <section aria-label="Selos da temporada" className="border-y border-[var(--wp-graphite)] bg-[var(--wp-coal)] py-10">
         <Reveal className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-14 gap-y-6 px-5 lg:px-8">
+          <FirstLogo width={356} height={280} className="h-14 opacity-90" />
           {selos.map((s) => (
             <Image
               key={s.src}
